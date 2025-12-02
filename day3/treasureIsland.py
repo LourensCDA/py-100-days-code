@@ -1,3 +1,5 @@
+# https://ascii.co.uk/art
+
 print(
     '''*******************************************************************************
           |                   |                  |                     |
@@ -52,6 +54,3 @@ elif door_color == "blue":
     exit()
 elif door_color == "yellow":
     print("YOU WIN! You found the treasure!")
-else:
-    print("GAME OVER! You chose a door that doesn't exist.")
-    exit()
