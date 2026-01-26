@@ -1,11 +1,19 @@
-from turtle import Turtle, Screen
+from turtle import Turtle, Screen, colormode
 import random
 
 timmy_the_turtle = Turtle()
+colormode(255)
 
 screen = Screen()
 
-colors_names = ["red", "green", "blue", "cyan", "magenta", "yellow", "black"]
+
+# colors_names = ["red", "green", "blue", "cyan", "magenta", "yellow", "black"]
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+
+    return (r, g, b)
 
 
 def drawShape(sides):
@@ -13,14 +21,14 @@ def drawShape(sides):
     for _ in range(sides):
         timmy_the_turtle.left(angle)
         timmy_the_turtle.forward(100)
-    timmy_the_turtle.color(random.choice(colors_names))
+    timmy_the_turtle.color(random.choice(random_color()))
 
 
 def randomWalk(direction):
 
     timmy_the_turtle.right(direction)
     timmy_the_turtle.forward(50)
-    timmy_the_turtle.color(random.choice(colors_names))
+    timmy_the_turtle.color(random_color())
 
 
 timmy_the_turtle.shape("turtle")
